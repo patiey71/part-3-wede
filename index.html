@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eco Trend Boutique</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <div class="brand"><span class="brand-mark"></span>Eco Trend Boutique</div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <nav>
+      <ul id="navList">
+        <li><button data-page="home" class="active">Home</button></li>
+        <li><button data-page="about">About</button></li>
+        <li><button data-page="products">Products</button></li>
+        <li><button data-page="community">Community</button></li>
+        <li><button data-page="contact">Contact</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HOME -->
+  <section id="home" class="active">
+    <div class="hero">
+      <div>
+        <p class="eyebrow">Sustainable retail, curated with care</p>
+        <h1>Everyday goods that don't cost the earth.</h1>
+        <p>Eco Trend Boutique brings together organic clothing, biodegradable household goods, natural personal care, and locally made artisanal pieces — so choosing sustainably doesn't mean compromising on quality.</p>
+        <div class="cta-row">
+          <button class="btn primary" onclick="showPage('products')">Explore the range</button>
+          <button class="btn" onclick="showPage('about')">Our story</button>
+        </div>
+      </div>
+      <div class="hero-visual"></div>
+    </div>
+
+    <div class="benefits">
+      <div class="benefit">
+        <span class="benefit-num">Attract</span>
+        <h3>Beautifully displayed goods</h3>
+        <p>High-quality imagery and detail so every product is easy to browse and understand.</p>
+      </div>
+      <div class="benefit">
+        <span class="benefit-num">Build trust</span>
+        <h3>Our story, told plainly</h3>
+        <p>Clear brand values and honest sourcing information, shared where customers can see it.</p>
+      </div>
+      <div class="benefit">
+        <span class="benefit-num">Enhance</span>
+        <h3>A better in-store visit</h3>
+        <p>Browse the catalogue online first, then come in with a purposeful, enjoyable shop.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <p class="eyebrow">About us</p>
+    <h1>Retail with a purpose</h1>
+    <div class="two-col" style="margin-top:32px;">
+      <div>
+        <h3>Mission</h3>
+        <p>We inspire and empower consumers to make sustainable choices by providing a curated selection of eco-friendly products — promoting environmental stewardship, supporting local artisans, and fostering a community that values sustainability and ethical consumption.</p>
+        <h3>Vision</h3>
+        <p>To be a leading retail destination for sustainable living, recognised for our commitment to environmental responsibility and community engagement — helping consumers put sustainability at the centre of how they shop.</p>
+      </div>
+      <div>
+        <h3>Our goals</h3>
+        <div class="goal"><span class="goal-mark"></span><div><strong>Sustainability</strong><p style="margin:.2em 0 0;">Offer products that are environmentally friendly, biodegradable, and ethically sourced.</p></div></div>
+        <div class="goal"><span class="goal-mark"></span><div><strong>Community engagement</strong><p style="margin:.2em 0 0;">Host workshops and discussions that educate on sustainable living.</p></div></div>
+        <div class="goal"><span class="goal-mark"></span><div><strong>Local support</strong><p style="margin:.2em 0 0;">Collaborate with local artisans, supporting the local economy and cutting carbon footprints.</p></div></div>
+        <div class="goal"><span class="goal-mark"></span><div><strong>Customer satisfaction</strong><p style="margin:.2em 0 0;">Deliver a personalised experience that earns repeat visits and loyalty.</p></div></div>
+      </div>
+    </div>
+
+    <blockquote>A world where consumers prioritise sustainability in their purchasing decisions — leading to a healthier planet for future generations.</blockquote>
+
+    <h3>Who we serve</h3>
+    <div class="audience-grid">
+      <div class="audience-card"><h3>Young professionals</h3><p>Aged 25–40, invested in sustainable living and willing to pay for eco-friendly products.</p></div>
+      <div class="audience-card"><h3>Families</h3><p>Looking for safe, non-toxic, sustainable products for children and the home.</p></div>
+      <div class="audience-card"><h3>Eco-activists</h3><p>Passionate about environmental issues, seeking businesses that share their values.</p></div>
+      <div class="audience-card"><h3>Health-conscious shoppers</h3><p>Prioritise wellness and prefer organic, natural products.</p></div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products">
+    <p class="eyebrow">What we offer</p>
+    <h1>A curated, everyday range</h1>
+    <p>Four categories, chosen for quality and impact — every item is vetted for how it's made, not just how it looks.</p>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <span class="tag">Wear</span>
+        <h3>Organic clothing</h3>
+        <p>Everyday and considered pieces made from organic and low-impact fibres.</p>
+      </div>
+      <div class="product-card">
+        <span class="tag">Home</span>
+        <h3>Biodegradable household goods</h3>
+        <p>Cleaning, kitchen, and living essentials that break down responsibly.</p>
+      </div>
+      <div class="product-card">
+        <span class="tag">Care</span>
+        <h3>Natural personal care</h3>
+        <p>Skin and body products made with natural, non-toxic ingredients.</p>
+      </div>
+      <div class="product-card">
+        <span class="tag">Made local</span>
+        <h3>Artisanal goods</h3>
+        <p>Handmade pieces sourced directly from local makers and producers.</p>
+      </div>
+    </div>
+
+    <div class="swot">
+      <div>
+        <h3>Why a physical store works</h3>
+        <ul>
+          <li>Direct customer access for immediate product interaction and purchase</li>
+          <li>Stronger brand presence and local credibility</li>
+          <li>Personalised, face-to-face service</li>
+          <li>Customers can see, touch, and try before buying</li>
+          <li>Close read on local preferences and trends</li>
+        </ul>
+      </div>
+      <div>
+        <h3>What we're managing for</h3>
+        <ul>
+          <li>Operating costs — rent, utilities, staffing, upkeep</li>
+          <li>Reach limited to our local geographic area</li>
+          <li>Inventory risk from over- or under-stocking</li>
+          <li>Reliance on foot traffic and seasonality</li>
+          <li>Competition from online and other local retailers</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY / BLOG -->
+  <section id="community">
+    <p class="eyebrow">Community</p>
+    <h1>More than a shop</h1>
+    <p>Eco Trend Boutique is a hub for the community — regular workshops and conversations that help people build sustainable habits, not just buy sustainable products.</p>
+
+    <div class="event-list">
+      <div class="event-row">
+        <div class="event-when">Monthly</div>
+        <div><h3>Sustainable living workshops</h3><p>Hands-on sessions on low-waste habits, natural care routines, and everyday swaps.</p></div>
+      </div>
+      <div class="event-row">
+        <div class="event-when">Quarterly</div>
+        <div><h3>Meet the makers</h3><p>Evenings with the local artisans behind our artisanal range, sharing their process.</p></div>
+      </div>
+      <div class="event-row">
+        <div class="event-when">Ongoing</div>
+        <div><h3>Community discussions</h3><p>Open conversations on environmental issues and ethical consumption, open to all.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <p class="eyebrow">Get in touch</p>
+    <h1>Visit or reach out</h1>
+    <div class="contact-grid" style="margin-top:32px;">
+      <div>
+        <form onsubmit="event.preventDefault(); alert('Thanks — your message has been noted. This form is a demo and does not send live messages.');">
+          <div class="field"><label for="name">Name</label><input id="name" type="text" required></div>
+          <div class="field"><label for="email">Email</label><input id="email" type="email" required></div>
+          <div class="field"><label for="message">Message</label><textarea id="message" required></textarea></div>
+          <button type="submit" class="btn primary">Send message</button>
+        </form>
+      </div>
+      <div>
+        <ul class="info-list">
+          <li><strong>Store</strong>Eco Trend Boutique, your local high street</li>
+          <li><strong>Hours</strong>Monday – Saturday, 9:00 – 18:00</li>
+          <li><strong>Email</strong>hello@ecotrendboutique.example</li>
+          <li><strong>Follow along</strong>Instagram &amp; Facebook @ecotrendboutique</li>
+        </ul>
+        <p class="form-note">Come browse the range online, then visit in store to see, touch, and try.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>© 2026 Eco Trend Boutique — Sustainable living, close to home.</footer>
+
+<script>
+  function showPage(id){
+    document.querySelectorAll('main section').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    document.querySelectorAll('nav button').forEach(b => b.classList.toggle('active', b.dataset.page === id));
+    document.getElementById('navList').classList.remove('open');
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+  document.querySelectorAll('nav button[data-page]').forEach(btn=>{
+    btn.addEventListener('click', ()=> showPage(btn.dataset.page));
+  });
+  document.getElementById('menuToggle').addEventListener('click', ()=>{
+    document.getElementById('navList').classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>

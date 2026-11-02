@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enquire About Products, Volunteering or Sponsorship | Eco Trend Boutique</title>
+  <meta name="description" content="Ask about product availability and pricing, apply to volunteer at a workshop, or enquire about sponsoring an Eco Trend Boutique community event.">
+  <meta name="keywords" content="product enquiry, volunteer sustainable shop, sponsor community workshop, eco trend boutique enquiry">
+  <link rel="canonical" href="https://ecotrendboutique.example/enquiry.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-wrap">
+      <div class="brand"><span class="brand-mark"></span>Eco Trend Boutique</div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <nav>
+        <ul id="navList">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="enquiry.html" class="active">Enquire</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="enquiry" class="reveal">
+      <p class="eyebrow">Enquire</p>
+      <h1>Ask about products, volunteering, or sponsorship</h1>
+      <p>Tell us what you're interested in and we'll show you an instant estimate of cost and availability below. For anything else, use our <a href="contact.html">general contact form</a>.</p>
+
+      <div class="contact-grid" style="margin-top:32px;">
+        <div>
+          <form id="enquiryForm" novalidate>
+            <div class="field">
+              <label for="enqName">Name</label>
+              <input id="enqName" name="enqName" type="text" required minlength="2">
+              <p class="error-msg" id="enqNameError" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="enqEmail">Email</label>
+              <input id="enqEmail" name="enqEmail" type="email" required>
+              <p class="error-msg" id="enqEmailError" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="enqPhone">Phone number</label>
+              <input id="enqPhone" name="enqPhone" type="tel" placeholder="e.g. 082 123 4567" required pattern="^[0-9+\s()-]{7,15}$">
+              <p class="error-msg" id="enqPhoneError" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="enqType">I'm enquiring about</label>
+              <select id="enqType" name="enqType" required>
+                <option value="">Select one…</option>
+                <option value="product">A product</option>
+                <option value="volunteer">Volunteering</option>
+                <option value="sponsor">Sponsoring an event</option>
+              </select>
+              <p class="error-msg" id="enqTypeError" role="alert"></p>
+            </div>
+
+            <!-- Shown only when "A product" is selected -->
+            <div class="field" id="productFieldWrap" hidden>
+              <label for="enqProduct">Which product?</label>
+              <select id="enqProduct" name="enqProduct"></select>
+            </div>
+
+            <div class="field">
+              <label for="enqDetails">Details</label>
+              <textarea id="enqDetails" name="enqDetails" required minlength="10" placeholder="Tell us a bit more…"></textarea>
+              <p class="error-msg" id="enqDetailsError" role="alert"></p>
+            </div>
+            <button type="submit" class="btn primary">Get instant estimate</button>
+            <p class="form-note" id="enquiryStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <div>
+          <!-- Populated by script.js once the form is validated and submitted -->
+          <div id="enquiryResult" class="enquiry-result" hidden>
+            <h3>Your estimate</h3>
+            <dl id="enquiryResultBody"></dl>
+          </div>
+          <ul class="info-list" id="enquiryHelp">
+            <li><strong>Products</strong>Get an instant price and stock estimate for any item in our range.</li>
+            <li><strong>Volunteering</strong>We'll let you know the next orientation date and what's involved.</li>
+            <li><strong>Sponsorship</strong>See indicative tiers for supporting a community workshop or event.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Eco Trend Boutique — Sustainable living, close to home.</footer>
+
+  <script src="products-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

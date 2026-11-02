@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Workshops & Events | Eco Trend Boutique</title>
+  <meta name="description" content="See photos from Eco Trend Boutique's sustainable living workshops, maker evenings, and community discussions — and find out what's coming up next.">
+  <meta name="keywords" content="sustainable living workshops, eco community events, zero waste workshop, local makers market">
+  <link rel="canonical" href="https://ecotrendboutique.example/community.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-wrap">
+      <div class="brand"><span class="brand-mark"></span>Eco Trend Boutique</div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <nav>
+        <ul id="navList">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="community.html" class="active">Community</a></li>
+          <li><a href="enquiry.html">Enquire</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="community" class="reveal">
+      <p class="eyebrow">Community</p>
+      <h1>More than a shop</h1>
+      <p>Eco Trend Boutique is a hub for the community — regular workshops and conversations that help people build sustainable habits, not just buy sustainable products.</p>
+
+      <div class="event-list">
+        <div class="event-row">
+          <div class="event-when">Monthly</div>
+          <div><h3>Sustainable living workshops</h3><p>Hands-on sessions on low-waste habits, natural care routines, and everyday swaps.</p></div>
+        </div>
+        <div class="event-row">
+          <div class="event-when">Quarterly</div>
+          <div><h3>Meet the makers</h3><p>Evenings with the local artisans behind our artisanal range, sharing their process.</p></div>
+        </div>
+        <div class="event-row">
+          <div class="event-when">Ongoing</div>
+          <div><h3>Community discussions</h3><p>Open conversations on environmental issues and ethical consumption, open to all.</p></div>
+        </div>
+      </div>
+
+      <!-- Image gallery with lightbox: click any photo to view it larger -->
+      <h2 style="margin-top:56px;">From our last few events</h2>
+      <div class="gallery" id="eventGallery">
+        <button class="gallery-item" data-full="images/workshop-zero-waste-swap.svg">
+          <img src="images/workshop-zero-waste-swap.svg" alt="Attendees sorting items at a zero-waste swap meet" loading="lazy">
+        </button>
+        <button class="gallery-item" data-full="images/workshop-natural-skincare.svg">
+          <img src="images/workshop-natural-skincare.svg" alt="A natural skincare workshop with ingredients laid out on a table" loading="lazy">
+        </button>
+        <button class="gallery-item" data-full="images/meet-the-makers-evening.svg">
+          <img src="images/meet-the-makers-evening.svg" alt="A local artisan speaking at a meet-the-makers evening" loading="lazy">
+        </button>
+        <button class="gallery-item" data-full="images/community-discussion-circle.svg">
+          <img src="images/community-discussion-circle.svg" alt="Community members seated in a discussion circle" loading="lazy">
+        </button>
+        <button class="gallery-item" data-full="images/workshop-plant-dye-textiles.svg">
+          <img src="images/workshop-plant-dye-textiles.svg" alt="Hands dyeing fabric with natural plant dye during a workshop" loading="lazy">
+        </button>
+        <button class="gallery-item" data-full="images/makers-market-popup.svg">
+          <img src="images/makers-market-popup.svg" alt="Stalls set up for a local makers market pop-up outside the boutique" loading="lazy">
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Eco Trend Boutique — Sustainable living, close to home.</footer>
+
+  <!-- Lightbox overlay, reused by script.js for every gallery image -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image">&times;</button>
+    <img id="lightboxImage" src="" alt="">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

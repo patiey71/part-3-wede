@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Eco Trend Boutique | Visit or Send a Message</title>
+  <meta name="description" content="Get in touch with Eco Trend Boutique — send us a message, find our store hours and location, or read answers to common questions.">
+  <meta name="keywords" content="contact eco trend boutique, sustainable shop hours, eco boutique location">
+  <link rel="canonical" href="https://ecotrendboutique.example/contact.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-wrap">
+      <div class="brand"><span class="brand-mark"></span>Eco Trend Boutique</div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <nav>
+        <ul id="navList">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="enquiry.html">Enquire</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="contact" class="reveal">
+      <p class="eyebrow">Get in touch</p>
+      <h1>Visit or reach out</h1>
+      <p>Use this form for a general message. Asking about a specific product, volunteering, or sponsoring an event? Use our <a href="enquiry.html">enquiry form</a> instead.</p>
+
+      <div class="contact-grid" style="margin-top:32px;">
+        <div>
+          <form id="contactForm" novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" required minlength="2">
+              <p class="error-msg" id="nameError" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required>
+              <p class="error-msg" id="emailError" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="messageType">Message type</label>
+              <select id="messageType" name="messageType" required>
+                <option value="">Select one…</option>
+                <option value="General question">General question</option>
+                <option value="Feedback">Feedback</option>
+                <option value="Order follow-up">Order follow-up</option>
+                <option value="Other">Other</option>
+              </select>
+              <p class="error-msg" id="messageTypeError" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required minlength="10"></textarea>
+              <p class="error-msg" id="messageError" role="alert"></p>
+            </div>
+            <button type="submit" class="btn primary">Send message</button>
+            <p class="form-note" id="contactStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+        <div>
+          <ul class="info-list">
+            <li><strong>Store</strong>Eco Trend Boutique, your local high street</li>
+            <li><strong>Hours</strong>Monday – Saturday, 9:00 – 18:00</li>
+            <li><strong>Email</strong>hello@ecotrendboutique.example</li>
+            <li><strong>Follow along</strong>Instagram &amp; Facebook @ecotrendboutique</li>
+          </ul>
+          <p class="form-note">Come browse the range online, then visit in store to see, touch, and try.</p>
+
+          <!-- Interactive map: shows the store location -->
+          <div id="storeMap" class="store-map" aria-label="Map showing the Eco Trend Boutique store location"></div>
+        </div>
+      </div>
+
+      <!-- FAQ accordion -->
+      <h2 style="margin-top:56px;">Frequently asked questions</h2>
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            Do you offer online shopping or delivery?
+          </button>
+          <div class="accordion-panel">
+            <p>Not yet — our website showcases the range so you can browse before visiting, but all purchases currently happen in store.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            Can I return or exchange a product?
+          </button>
+          <div class="accordion-panel">
+            <p>Yes, unused items in original packaging can be exchanged within 14 days of purchase with a valid receipt.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            How do I find out about upcoming workshops?
+          </button>
+          <div class="accordion-panel">
+            <p>Check the <a href="community.html">Community page</a> for our regular schedule, or follow us on Instagram and Facebook for announcements.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            Can my business become a supplier?
+          </button>
+          <div class="accordion-panel">
+            <p>We love hearing from local makers — send us an <a href="enquiry.html">enquiry</a> with a bit about your products and we'll be in touch.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Eco Trend Boutique — Sustainable living, close to home.</footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="script.js"></script>
+</body>
+</html>

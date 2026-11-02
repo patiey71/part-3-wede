@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Sustainable Products Online | Eco Trend Boutique</title>
+  <meta name="description" content="Browse Eco Trend Boutique's range of organic clothing, biodegradable household goods, natural personal care, and local artisanal goods. Search, filter, and sort to find your fit.">
+  <meta name="keywords" content="eco friendly products, organic clothing, biodegradable household goods, natural personal care, artisanal goods, sustainable shopping">
+  <link rel="canonical" href="https://ecotrendboutique.example/products.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-wrap">
+      <div class="brand"><span class="brand-mark"></span>Eco Trend Boutique</div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <nav>
+        <ul id="navList">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="enquiry.html">Enquire</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="products" class="reveal">
+      <p class="eyebrow">What we offer</p>
+      <h1>A curated, everyday range</h1>
+      <p>Four categories, chosen for quality and impact — every item is vetted for how it's made, not just how it looks. Search, filter, or sort the catalogue below.</p>
+
+      <!-- Dynamic catalogue controls: search, category filter, sort -->
+      <div class="catalogue-controls" role="search">
+        <div class="field catalogue-search">
+          <label for="productSearch">Search products</label>
+          <input type="search" id="productSearch" placeholder="Try &quot;soap&quot; or &quot;basket&quot;" aria-describedby="resultCount">
+        </div>
+        <div class="field">
+          <label for="categoryFilter">Category</label>
+          <select id="categoryFilter">
+            <option value="all">All categories</option>
+            <option value="clothing">Organic clothing</option>
+            <option value="household">Household goods</option>
+            <option value="care">Personal care</option>
+            <option value="artisanal">Artisanal goods</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="sortOrder">Sort by</label>
+          <select id="sortOrder">
+            <option value="name-asc">Name (A–Z)</option>
+            <option value="name-desc">Name (Z–A)</option>
+            <option value="price-asc">Price (low to high)</option>
+            <option value="price-desc">Price (high to low)</option>
+          </select>
+        </div>
+      </div>
+
+      <p id="resultCount" class="form-note" aria-live="polite"></p>
+
+      <!-- Product cards are rendered here by script.js from products-data.js -->
+      <div class="product-grid" id="productGrid"></div>
+      <p id="noResults" class="form-note" hidden>No products match your search. Try a different term or category.</p>
+
+      <div class="swot">
+        <div>
+          <h3>Why a physical store works</h3>
+          <ul>
+            <li>Direct customer access for immediate product interaction and purchase</li>
+            <li>Stronger brand presence and local credibility</li>
+            <li>Personalised, face-to-face service</li>
+            <li>Customers can see, touch, and try before buying</li>
+            <li>Close read on local preferences and trends</li>
+          </ul>
+        </div>
+        <div>
+          <h3>What we're managing for</h3>
+          <ul>
+            <li>Operating costs — rent, utilities, staffing, upkeep</li>
+            <li>Reach limited to our local geographic area</li>
+            <li>Inventory risk from over- or under-stocking</li>
+            <li>Reliance on foot traffic and seasonality</li>
+            <li>Competition from online and other local retailers</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Eco Trend Boutique — Sustainable living, close to home.</footer>
+
+  <script src="products-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
