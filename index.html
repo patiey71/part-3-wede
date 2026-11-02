@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173f2b">
+  <meta name="description" content="Eco Trend Boutique: thoughtfully curated sustainable clothing, home goods and natural care.">
+  <title>Eco Trend Boutique | Sustainable living, beautifully</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Leaflet map styles (OpenStreetMap) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+</head>
+<body>
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="#home" aria-label="Eco Trend Boutique home"><span class="brand-mark">✿</span><span>eco trend <b>boutique</b></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav aria-label="Main navigation">
+      <ul id="navList">
+        <li><button class="nav-link active" data-page="home">Home</button></li>
+        <li><button class="nav-link" data-page="about">Our story</button></li>
+        <li><button class="nav-link" data-page="products">Shop</button></li>
+        <li><button class="nav-link" data-page="search">Search</button></li>
+        <li><button class="nav-link" data-page="gallery">Gallery</button></li>
+        <li><button class="nav-link" data-page="events">Events</button></li>
+        <li><button class="nav-link" data-page="contact">Visit us</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="home" class="page active">
+    <div class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Small choices. Greener everyday living.</p>
+        <h1>Good for your home.<br><em>Kinder to the planet.</em></h1>
+        <p class="hero-intro">Thoughtfully chosen clothing, home essentials and feel-good personal care, all brought together in one welcoming place.</p>
+        <div class="button-row">
+          <button class="btn primary" onclick="showPage('products')">Explore the collection <span>↗</span></button>
+          <button class="btn ghost" onclick="showPage('about')">Get to know us</button>
+        </div>
+        <div class="hero-note"><span class="dot"></span> Thoughtful products, more mindful living</div>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=85" alt="Thoughtfully styled everyday product display">
+        <div class="floating-card"><span>♻</span><div><strong>Choose consciously</strong><small>Little changes add up</small></div></div>
+      </div>
+    </div>
+    <div class="value-strip">
+      <article><span>01</span><div><h3>Better materials</h3><p>Organic, reusable and lower-impact choices.</p></div></article>
+      <article><span>02</span><div><h3>Local makers</h3><p>Celebrating the people and craft close to home.</p></div></article>
+      <article><span>03</span><div><h3>Everyday ease</h3><p>Simple swaps that fit real life.</p></div></article>
+    </div>
+    <div class="section-heading">
+      <p class="eyebrow">A little inspiration</p><h2>Make room for a greener routine</h2>
+      <p>Explore a few of the things we love.</p>
+    </div>
+    <div class="feature-grid">
+      <article class="feature-card feature-tall"><img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=900&q=85" alt="Neutral clothing on a clothing rack"><div><span>Wear well</span><h3>Clothing with a lighter footprint</h3></div></article>
+      <article class="feature-card"><img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=900&q=85" alt="Reusable water bottle and daily essentials"><div><span>Live simply</span><h3>Useful things, thoughtfully made</h3></div></article>
+      <article class="feature-card"><img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=900&q=85" alt="Natural skincare products"><div><span>Care naturally</span><h3>Gentler everyday rituals</h3></div></article>
+    </div>
+    <div class="banner-cta"><div><p class="eyebrow">Come be part of it</p><h2>Sustainable living is better together.</h2></div><button class="btn light" onclick="showPage('events')">See community events ↗</button></div>
+  </section>
+
+  <section id="about" class="page">
+    <div class="page-intro"><p class="eyebrow">Our story</p><h1>Retail with a little more purpose.</h1><p>We believe shopping can feel good and do a little good, too.</p></div>
+    <div class="two-col">
+      <div><h2>Our mission</h2><p>We inspire and empower people to make more sustainable choices through a curated selection of eco-friendly products. We aim to support local makers, encourage mindful consumption and make lower-impact living feel accessible.</p><h2>Our vision</h2><p>To become a welcoming destination for sustainable living, where thoughtful products and community connections help make greener habits part of everyday life.</p></div>
+      <div class="soft-panel"><p class="eyebrow">What matters to us</p><div class="goal"><b>01</b><div><h3>Responsible choices</h3><p>Prioritising reusable, biodegradable and ethically sourced options.</p></div></div><div class="goal"><b>02</b><div><h3>Local support</h3><p>Working with local artisans and independent producers.</p></div></div><div class="goal"><b>03</b><div><h3>Community learning</h3><p>Sharing practical ideas through workshops and conversations.</p></div></div></div>
+    </div>
+    <blockquote>“A greener lifestyle isn't about being perfect. It's about making better choices, one day at a time.”</blockquote>
+    <h2 class="subheading">Who we welcome</h2>
+    <div class="audience-grid"><article><h3>Young professionals</h3><p>For people looking for considered, practical everyday choices.</p></article><article><h3>Families</h3><p>For households seeking reusable and gentler home essentials.</p></article><article><h3>Eco-minded shoppers</h3><p>For anyone who wants their purchases to reflect their values.</p></article><article><h3>Curious beginners</h3><p>For people taking their first steps towards sustainable living.</p></article></div>
+  </section>
+
+  <section id="products" class="page">
+    <div class="page-intro"><p class="eyebrow">The collection</p><h1>Everyday goods, chosen with care.</h1><p>Browse our four core collections. These are sample catalogue items for the website project.</p></div>
+    <div class="product-grid" id="productGrid">
+      <article class="product-card" data-name="Organic cotton shirt" data-category="clothing"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80" alt="Organic cotton shirt"><div class="product-info"><span class="tag">Wear</span><h3>Organic cotton basics</h3><p>Comfortable everyday pieces made with natural fibres.</p></div></article>
+      <article class="product-card" data-name="Reusable home essentials" data-category="home"><img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=700&q=80" alt="Reusable home essentials"><div class="product-info"><span class="tag">Home</span><h3>Reusable home essentials</h3><p>Simple swaps for a more mindful home routine.</p></div></article>
+      <article class="product-card" data-name="Natural skincare" data-category="care"><img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=700&q=80" alt="Natural skincare products"><div class="product-info"><span class="tag">Care</span><h3>Natural personal care</h3><p>Thoughtful daily care with naturally inspired ingredients.</p></div></article>
+      <article class="product-card" data-name="Handmade artisan basket" data-category="artisan"><img src="https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=700&q=80" alt="Handwoven artisan basket"><div class="product-info"><span class="tag">Made local</span><h3>Artisanal home pieces</h3><p>Handmade details that bring warmth and character.</p></div></article>
+    </div>
+  </section>
+
+  <section id="search" class="page">
+    <div class="page-intro"><p class="eyebrow">Find your favourites</p><h1>Search the boutique.</h1><p>Search products or community events by name or keyword.</p></div>
+    <div class="search-panel"><label for="siteSearch">What are you looking for?</label><div class="search-box"><input id="siteSearch" type="search" placeholder="Try “cotton”, “workshop” or “home”"><button class="btn primary" id="searchButton">Search</button></div><div class="filter-row"><label><input type="radio" name="searchType" value="all" checked> All</label><label><input type="radio" name="searchType" value="products"> Products</label><label><input type="radio" name="searchType" value="events"> Events</label></div><p id="searchCount" class="search-count" aria-live="polite">Try a keyword to explore the catalogue and events.</p><div id="searchResults" class="results-grid"></div></div>
+  </section>
+
+  <section id="gallery" class="page">
+    <div class="page-intro"><p class="eyebrow">A glimpse inside</p><h1>Little moments of green living.</h1><p>Select an image to view it larger.</p></div>
+    <div class="gallery-grid" id="galleryGrid">
+      <button class="gallery-item" data-full="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1500&q=90"><img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=700&q=80" alt="Clothing collection"><span>Conscious clothing</span></button>
+      <button class="gallery-item" data-full="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=1500&q=90"><img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=700&q=80" alt="Natural skincare"><span>Natural care</span></button>
+      <button class="gallery-item" data-full="https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=1500&q=90"><img src="https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=700&q=80" alt="Handmade woven basket"><span>Made by hand</span></button>
+      <button class="gallery-item" data-full="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=1500&q=90"><img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=700&q=80" alt="Home and lifestyle products"><span>Mindful home</span></button>
+      <button class="gallery-item" data-full="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1500&q=90"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80" alt="Everyday lifestyle item"><span>Everyday essentials</span></button>
+      <button class="gallery-item" data-full="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1500&q=90"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80" alt="Cotton shirt"><span>Wear it well</span></button>
+    </div>
+  </section>
+
+  <section id="events" class="page">
+    <div class="page-intro"><p class="eyebrow">Learn, share, connect</p><h1>Events & community.</h1><p>Join a workshop, meet local makers or share ideas with people who care about a greener future.</p></div>
+    <div class="event-list" id="eventList">
+      <article class="event-card" data-name="Sustainable living workshop" data-category="workshop"><div class="event-date"><b>Monthly</b><span>Workshop</span></div><div><h3>Sustainable living workshop</h3><p>Practical low-waste habits, reusable swaps and small changes for everyday life.</p></div><span class="event-arrow">↗</span></article>
+      <article class="event-card" data-name="Meet the makers" data-category="community"><div class="event-date"><b>Quarterly</b><span>Community</span></div><div><h3>Meet the makers</h3><p>Get to know local artisans and hear the stories behind their handmade work.</p></div><span class="event-arrow">↗</span></article>
+      <article class="event-card" data-name="Community conversations" data-category="discussion"><div class="event-date"><b>Ongoing</b><span>Discussion</span></div><div><h3>Community conversations</h3><p>Friendly discussions about ethical consumption and environmental care.</p></div><span class="event-arrow">↗</span></article>
+    </div>
+    <p class="form-note">Event dates and booking details are examples for this demonstration website. Add confirmed dates and contact details before using them publicly.</p>
+  </section>
+
+  <section id="contact" class="page">
+    <div class="page-intro"><p class="eyebrow">Find your way here</p><h1>Visit or get in touch.</h1><p>Use the map to look up the area where your boutique is located.</p></div>
+    <div class="contact-grid">
+      <form class="contact-form" id="contactForm"><h2>Send us a message</h2><div class="field"><label for="name">Your name</label><input id="name" type="text" required></div><div class="field"><label for="email">Email address</label><input id="email" type="email" required></div><div class="field"><label for="message">Message</label><textarea id="message" rows="4" required></textarea></div><button class="btn primary" type="submit">Send message ↗</button><p class="form-note">Demo form: it displays a confirmation but does not send email.</p></form>
+      <div class="location-panel"><h2>Find a location</h2><p>Enter your shop address, suburb or town to place a marker on the map.</p><div class="search-box map-search"><input id="locationSearch" type="search" placeholder="e.g. Sandton, Johannesburg"><button class="btn primary" id="locateButton">Find</button></div><div id="map" role="application" aria-label="Interactive OpenStreetMap"></div><p class="map-credit">Map data © OpenStreetMap contributors. Search uses OpenStreetMap Nominatim.</p></div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="footer-inner"><a class="brand footer-brand" href="#home"><span class="brand-mark">✿</span><span>eco trend <b>boutique</b></span></a><p>Thoughtful choices for a greener everyday.</p><small>© 2026 Eco Trend Boutique · Website project</small></div></footer>
+
+<div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox-close" id="lightboxClose" aria-label="Close image">×</button><img id="lightboxImage" src="" alt=""><p id="lightboxCaption"></p></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script>
+  const pages = [...document.querySelectorAll('main .page')];
+  function showPage(id) {
+    pages.forEach(page => page.classList.toggle('active', page.id === id));
+    document.querySelectorAll('[data-page]').forEach(button => button.classList.toggle('active', button.dataset.page === id));
+    document.getElementById('navList').classList.remove('open');
+    document.getElementById('menuToggle').setAttribute('aria-expanded', 'false');
+    window.scrollTo({top: 0, behavior: 'smooth'});
+    if (id === 'contact' && window.storeMap) setTimeout(() => storeMap.invalidateSize(), 150);
+  }
+  document.querySelectorAll('[data-page]').forEach(button => button.addEventListener('click', () => showPage(button.dataset.page)));
+  document.querySelectorAll('button[onclick*="showPage"]').forEach(button => button.addEventListener('click', () => {
+    const match = button.getAttribute('onclick').match(/showPage\('([^']+)'\)/);
+    if (match) showPage(match[1]);
+  }));
+  document.getElementById('menuToggle').addEventListener('click', () => {
+    const list = document.getElementById('navList');
+    list.classList.toggle('open');
+    document.getElementById('menuToggle').setAttribute('aria-expanded', list.classList.contains('open'));
+  });
+
+  const products = [...document.querySelectorAll('#productGrid .product-card')].map(card => ({type:'products', title:card.querySelector('h3').textContent, description:card.querySelector('p').textContent, image:card.querySelector('img').src}));
+  const events = [...document.querySelectorAll('#eventList .event-card')].map(card => ({type:'events', title:card.querySelector('h3').textContent, description:card.querySelector('p').textContent}));
+  function runSearch() {
+    const term = document.getElementById('siteSearch').value.trim().toLowerCase();
+    const type = document.querySelector('input[name="searchType"]:checked').value;
+    const source = [...(type === 'events' ? [] : products), ...(type === 'products' ? [] : events)];
+    const matches = source.filter(item => (item.title + ' ' + item.description).toLowerCase().includes(term));
+    const results = document.getElementById('searchResults');
+    results.innerHTML = '';
+    document.getElementById('searchCount').textContent = term ? `${matches.length} result${matches.length === 1 ? '' : 's'} for “${term}”.` : 'Enter a keyword to search the catalogue and events.';
+    if (!term) return;
+    matches.forEach(item => {
+      const article = document.createElement('article');
+      article.className = 'result-card';
+      if (item.image) { const img = document.createElement('img'); img.src = item.image; img.alt = ''; article.appendChild(img); }
+      const label = document.createElement('span'); label.className = 'tag'; label.textContent = item.type === 'products' ? 'Product' : 'Event';
+      const title = document.createElement('h3'); title.textContent = item.title;
+      const desc = document.createElement('p'); desc.textContent = item.description;
+      article.append(label, title, desc); results.appendChild(article);
+    });
+    if (!matches.length) results.textContent = 'No matches yet. Try another keyword.';
+  }
+  document.getElementById('searchButton').addEventListener('click', runSearch);
+  document.getElementById('siteSearch').addEventListener('keydown', e => { if (e.key === 'Enter') runSearch(); });
+
+  const lightbox = document.getElementById('lightbox');
+  document.querySelectorAll('.gallery-item').forEach(item => item.addEventListener('click', () => {
+    const img = item.querySelector('img');
+    document.getElementById('lightboxImage').src = item.dataset.full;
+    document.getElementById('lightboxImage').alt = img.alt;
+    document.getElementById('lightboxCaption').textContent = item.querySelector('span').textContent;
+    lightbox.classList.add('open'); lightbox.setAttribute('aria-hidden', 'false');
+  }));
+  function closeLightbox() { lightbox.classList.remove('open'); lightbox.setAttribute('aria-hidden', 'true'); }
+  document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+  function toast(message) {
+    const el = document.getElementById('toast'); el.textContent = message; el.classList.add('show');
+    setTimeout(() => el.classList.remove('show'), 3200);
+  }
+  document.getElementById('contactForm').addEventListener('submit', e => { e.preventDefault(); toast('Thank you! Your demo message has been recorded on this page.'); e.target.reset(); });
+
+  // Interactive map: users can search their actual shop address; no invented shop location is shown.
+  let storeMap, storeMarker;
+  if (window.L) {
+    storeMap = L.map('map').setView([-26.2041, 28.0473], 5);
+    window.storeMap = storeMap;
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors', maxZoom: 19 }).addTo(storeMap);
+  }
+  async function locateStore() {
+    const query = document.getElementById('locationSearch').value.trim();
+    if (!query) { toast('Please enter your shop address, suburb or town.'); return; }
+    const button = document.getElementById('locateButton'); button.disabled = true; button.textContent = 'Searching…';
+    try {
+      const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&limit=1&q=${encodeURIComponent(query)}`);
+      const data = await response.json();
+      if (!data.length) { toast('We could not find that place. Try adding the town or city.'); return; }
+      const place = data[0], lat = Number(place.lat), lon = Number(place.lon);
+      storeMap.setView([lat, lon], 15);
+      if (storeMarker) storeMap.removeLayer(storeMarker);
+      storeMarker = L.marker([lat, lon]).addTo(storeMap).bindPopup(`<strong>Eco Trend Boutique</strong><br>${place.display_name}`).openPopup();
+      toast('Location found and marked on the map.');
+    } catch (error) { toast('The map search is temporarily unavailable. Please try again.'); }
+    finally { button.disabled = false; button.textContent = 'Find'; }
+  }
+  document.getElementById('locateButton').addEventListener('click', locateStore);
+  document.getElementById('locationSearch').addEventListener('keydown', e => { if (e.key === 'Enter') locateStore(); });
+</script>
+</body>
+</html>
